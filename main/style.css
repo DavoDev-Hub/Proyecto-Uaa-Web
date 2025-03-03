@@ -72,8 +72,43 @@ body{
     height: 10vh;
     background-image: linear-gradient(180deg, #6786f8 0, #3c78f2 50%, #006aec 100%);
 }
+
+
 .davodev-estudios img{
     margin: 0;
     padding: 0;
     width: 30%;
 }
+
+
+.davodev-estudios-description{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    background-color: #333; 
+}
+
+
+.davodev-description-estudios:nth-child(2){
+    font-family: "Scope One", serif;
+    font-size: 1.5rem;
+    color: white;
+    text-align: justify;
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.davodev-description-estudios:last-child{
+    grid-area: 1 / 3 / 2 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 8rem 2rem 1rem;
+}
+
+.uaa-map{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
