@@ -65,7 +65,7 @@
         </svg>
         CSS</a
       >
-      <a>
+      <a href="../js-section/index.html">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           x="0px"
@@ -444,154 +444,195 @@
     </div>
 
     <div class="davodev-section">
-      <img src="../assets/images/CSS-LETTERS.png" alt="" />
+      <img src="../assets/images/JS-LETTER.png" alt="" />
     </div>
 
     <nav class="main-nav">
       <div class="container">
-        <nav class="navbar">
-          <a href="#introduccion">Introducción</a>
-          <a href="#selectores">Selectores</a>
-          <a href="#propiedades">Propiedades</a>
-          <a href="#unidades">Unidades</a>
-        </nav>
+        <a href="#introduccion-js">Introducción</a>
+        <a href="#variables-js">Variables</a>
+        <a href="#funciones-js">Funciones</a>
+        <a href="#dom-js">DOM</a>
+        <a href="#eventos-js">Eventos</a>
+        <a href="#ajax-js">Ajax</a>
+        <a href="#ejercicios-js">Ejercicios</a>
       </div>
     </nav>
 
     <main class="container">
       <section class="welcome-section">
-        <div class="container">
-          <h1>¡Bienvenido a la Guía de CSS!</h1>
-          <p>
-            CSS (Cascading Style Sheets) es un lenguaje de diseño que se utiliza
-            para dar estilo a las páginas web. 🎨 Con CSS, puedes controlar el
-            color, la tipografía, el espaciado, el diseño y mucho más. 🚀 ¡Es el
-            complemento perfecto para HTML! 💻
-          </p>
-        </div>
+        <h1>¡Bienvenido a la Guía de JAVASCRIPT!</h1>
+        <p>
+          JavaScript es un lenguaje de programación que permite crear contenido
+          dinámico en las páginas web. 🌐 Con JavaScript, puedes hacer que tu
+          sitio web sea interactivo, responder a eventos del usuario, manipular
+          el DOM, y mucho más. 🚀 ¡Es una habilidad esencial para cualquier
+          desarrollador web! 💻
+        </p>
       </section>
-      <!-- Sección de Introducción -->
-      <section id="introduccion" class="content-section">
+      <section id="introduccion-js" class="content-section">
         <div class="container">
-          <h2>Introducción a CSS</h2>
+          <h2>Introducción a JavaScript</h2>
           <p>
-            CSS es un lenguaje que se utiliza para definir el estilo de los
-            elementos HTML. Con CSS, puedes cambiar el color de fondo, el tamaño
-            de la fuente, el espaciado entre elementos y mucho más. Aquí tienes
-            un ejemplo básico:
+            JavaScript es un lenguaje de programación que se utiliza
+            principalmente para crear interactividad en las páginas web. Con
+            JavaScript, puedes manipular el DOM, manejar eventos, hacer
+            solicitudes HTTP, y mucho más. Aquí tienes un ejemplo básico:
           </p>
           <div class="code-example">
             <div class="code-header">
-              <span>Ejemplo de CSS</span>
+              <span>Ejemplo de JavaScript</span>
             </div>
-            <pre><code>body {
-    background-color: #f4f4f4;
-    font-family: 'Montserrat', sans-serif;
-    color: #333;
-}</code></pre>
+            <pre><code>// Hola Mundo en JavaScript
+console.log("¡Hola, Mundo!");</code></pre>
           </div>
         </div>
       </section>
 
-      <!-- Sección de Selectores -->
-      <section id="selectores" class="content-section">
+      <section id="variables-js" class="content-section">
         <div class="container">
-          <h2>Selectores en CSS</h2>
+          <h2>Variables y Tipos de Datos</h2>
           <p>
-            Los selectores son patrones que se utilizan para seleccionar los
-            elementos a los que se aplicarán los estilos. Aquí tienes algunos
-            ejemplos:
+            En JavaScript, puedes declarar variables usando <code>let</code>,
+            <code>const</code> o <code>var</code>. Los tipos de datos incluyen
+            números, cadenas, booleanos, objetos, y más.
           </p>
-          <ul class="feature-list">
-            <li>
-              <div class="code-tag">.clase</div>
-              <div class="description">
-                Selecciona elementos con la clase especificada.
-              </div>
-            </li>
-            <li>
-              <div class="code-tag">#id</div>
-              <div class="description">
-                Selecciona un elemento con el ID especificado.
-              </div>
-            </li>
-            <li>
-              <div class="code-tag">elemento</div>
-              <div class="description">
-                Selecciona todos los elementos del tipo especificado.
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
+          <div class="code-example">
+            <div class="code-header">
+              <span>Ejemplo de Variables</span>
+            </div>
+            <pre><code>let nombre = "Juan";
+const edad = 25;
+var esEstudiante = true;
 
-      <!-- Sección de Propiedades -->
-      <section id="propiedades" class="content-section">
-        <div class="container">
-          <h2>Propiedades de CSS</h2>
-          <p>
-            Las propiedades de CSS definen cómo se verán los elementos
-            seleccionados. Aquí tienes algunas propiedades comunes:
-          </p>
-          <div class="lists-container">
-            <div class="list-box">
-              <h3>Texto</h3>
-              <ul>
-                <li><strong>color</strong>: Define el color del texto.</li>
-                <li>
-                  <strong>font-size</strong>: Define el tamaño de la fuente.
-                </li>
-                <li>
-                  <strong>font-family</strong>: Define la familia de la fuente.
-                </li>
-              </ul>
-            </div>
-            <div class="list-box">
-              <h3>Fondo</h3>
-              <ul>
-                <li>
-                  <strong>background-color</strong>: Define el color de fondo.
-                </li>
-                <li>
-                  <strong>background-image</strong>: Define una imagen de fondo.
-                </li>
-                <li>
-                  <strong>background-size</strong>: Define el tamaño de la
-                  imagen de fondo.
-                </li>
-              </ul>
-            </div>
+console.log(nombre); // Juan
+console.log(edad); // 25
+console.log(esEstudiante); // true</code></pre>
           </div>
         </div>
       </section>
 
-      <!-- Sección de Unidades -->
-      <section id="unidades" class="content-section">
+      <section id="funciones-js" class="content-section">
         <div class="container">
-          <h2>Unidades en CSS</h2>
+          <h2>Funciones en JavaScript</h2>
           <p>
-            Las unidades en CSS se utilizan para definir tamaños, distancias y
-            otras medidas. Aquí tienes algunas unidades comunes:
+            Las funciones son bloques de código que puedes reutilizar. Puedes
+            definir funciones con la palabra clave <code>function</code> o
+            usando arrow functions.
           </p>
-          <div class="lists-container">
-            <div class="list-box">
-              <h3>Absolutas</h3>
-              <ul>
-                <li><strong>px</strong>: Píxeles.</li>
-                <li><strong>cm</strong>: Centímetros.</li>
-                <li><strong>in</strong>: Pulgadas.</li>
-              </ul>
+          <div class="code-example">
+            <div class="code-header">
+              <span>Ejemplo de Funciones</span>
             </div>
-            <div class="list-box">
-              <h3>Relativas</h3>
-              <ul>
-                <li><strong>%</strong>: Porcentaje.</li>
-                <li><strong>em</strong>: Relativo al tamaño de la fuente.</li>
-                <li>
-                  <strong>rem</strong>: Relativo al tamaño de la fuente raíz.
-                </li>
-              </ul>
+            <pre><code>// Función tradicional
+function saludar(nombre) {
+  return "Hola, " + nombre;
+}
+
+// Arrow function
+const despedir = (nombre) => {
+  return "Adiós, " + nombre;
+};
+
+console.log(saludar("Juan")); // Hola, Juan
+console.log(despedir("Juan")); // Adiós, Juan</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section id="dom-js" class="content-section">
+        <div class="container">
+          <h2>Manipulación del DOM</h2>
+          <p>
+            JavaScript te permite seleccionar y manipular elementos del DOM para
+            cambiar el contenido, estilo, o estructura de una página web.
+          </p>
+          <div class="code-example">
+            <div class="code-header">
+              <span>Ejemplo de Manipulación del DOM</span>
             </div>
+            <pre><code>// Seleccionar un elemento por su ID
+const titulo = document.getElementById("titulo");
+
+// Cambiar el contenido del elemento
+titulo.textContent = "¡Nuevo Título!";
+
+// Cambiar el estilo
+titulo.style.color = "red";</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section id="eventos-js" class="content-section">
+        <div class="container">
+          <h2>Eventos en JavaScript</h2>
+          <p>
+            Los eventos permiten que tu página web responda a las acciones del
+            usuario, como clics, cambios en los campos de entrada, etc.
+          </p>
+          <div class="code-example">
+            <div class="code-header">
+              <span>Ejemplo de Eventos</span>
+            </div>
+            <pre><code>// Seleccionar un botón
+const boton = document.getElementById("miBoton");
+
+// Agregar un evento de clic
+boton.addEventListener("click", () => {
+  alert("¡Botón clickeado!");
+});</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section id="ajax-js" class="content-section">
+        <div class="container">
+          <h2>AJAX y Fetch API</h2>
+          <p>
+            Con Fetch API, puedes hacer solicitudes HTTP asíncronas para obtener
+            datos de un servidor sin recargar la página.
+          </p>
+          <div class="code-example">
+            <div class="code-header">
+              <span>Ejemplo de Fetch API</span>
+            </div>
+            <pre><code>// Obtener datos de una API
+fetch('https://jsonplaceholder.typicode.com/posts/1')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección de Ejercicios Prácticos -->
+      <section id="ejercicios-js" class="content-section">
+        <div class="container">
+          <h2>Ejercicios Prácticos</h2>
+          <p>
+            Aquí tienes algunos ejercicios para practicar tus habilidades en
+            JavaScript:
+          </p>
+          <div class="list-box">
+            <h3>Ejercicio 1: Suma de dos números</h3>
+            <p>
+              Escribe una función que tome dos números como argumentos y
+              devuelva su suma.
+            </p>
+          </div>
+          <div class="list-box">
+            <h3>Ejercicio 2: Manipulación del DOM</h3>
+            <p>
+              Crea un botón que, al hacer clic, cambie el texto de un elemento
+              en la página.
+            </p>
+          </div>
+          <div class="list-box">
+            <h3>Ejercicio 3: Fetch API</h3>
+            <p>
+              Usa Fetch API para obtener datos de una API pública y muestra los
+              resultados en la página.
+            </p>
           </div>
         </div>
       </section>
