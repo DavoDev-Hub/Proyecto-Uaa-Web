@@ -138,3 +138,84 @@ td, tr{
     width: 10%;
     height: 20%;
 }
+/* Estilos para el formulario */
+.davodev-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #333;
+    color: white;
+}
+
+.davodev-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    gap: 1rem;
+}
+
+.davodev-form label {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.davodev-form input,
+.davodev-form select,
+.davodev-form textarea {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #444;
+    color: white;
+}
+
+.davodev-form input:focus,
+.davodev-form select:focus,
+.davodev-form textarea:focus {
+    outline: none;
+    border-color: #006aec;
+}
+
+.davodev-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.davodev-form button {
+    padding: 0.75rem;
+    font-size: 1.2rem;
+    background-color: #006aec;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.davodev-form button:hover {
+    background-color: #0056b3;
+}
+
+.davodev-form label[for="subscribe"] {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+.davodev-form input[type="checkbox"] {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+/* Estilos para el footer */
+.footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1rem;
+}
