@@ -31,9 +31,8 @@ body{
 .navbar-bottom{
     background-color: #222;
 }
-._logo{
-    align-self: flex-start;
-}
+
+
 .davodev-section{
     box-sizing: border-box;
     display: flex;
