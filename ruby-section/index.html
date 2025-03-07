@@ -447,194 +447,211 @@
     </div>
 
     <div class="davodev-section">
-      <img src="../assets/images/JS-LETTER.png" alt="" />
+      <img src="../assets/images/RUBY-LETTER.png" alt="" />
     </div>
 
     <nav class="main-nav">
       <div class="container">
-        <a href="#introduccion-js">Introducción</a>
-        <a href="#variables-js">Variables</a>
-        <a href="#funciones-js">Funciones</a>
-        <a href="#dom-js">DOM</a>
-        <a href="#eventos-js">Eventos</a>
-        <a href="#ajax-js">Ajax</a>
-        <a href="#ejercicios-js">Ejercicios</a>
+        <a href="#introduccion-ruby">Introducción</a>
+        <a href="#variables-ruby">Variables</a>
+        <a href="#estructuras-ruby">Estructuras</a>
+        <a href="#metodos-ruby">Métodos</a>
+        <a href="#arrays-ruby">Arrays</a>
+        <a href="#archivos-ruby">Archivos</a>
+        <a href="#ejercicios-ruby">Ejercicios</a>
       </div>
     </nav>
 
     <main class="container">
       <section class="welcome-section">
-        <h1>¡Bienvenido a la Guía de JAVASCRIPT!</h1>
+        <h1>¡Bienvenido a la Guía de Ruby!</h1>
         <p>
-          JavaScript es un lenguaje de programación que permite crear contenido
-          dinámico en las páginas web. 🌐 Con JavaScript, puedes hacer que tu
-          sitio web sea interactivo, responder a eventos del usuario, manipular
-          el DOM, y mucho más. 🚀 ¡Es una habilidad esencial para cualquier
-          desarrollador web! 💻
+          Ruby es un lenguaje de programación dinámico y orientado a objetos,
+          conocido por su sintaxis elegante y su uso en el desarrollo web con
+          Ruby on Rails. 🚀 Con Ruby, puedes crear aplicaciones web, automatizar
+          tareas, y mucho más. 🌟 ¡Es una herramienta versátil y poderosa para
+          cualquier desarrollador de software! 💎
         </p>
       </section>
-      <section id="introduccion-js" class="content-section">
+      <!-- Sección de Introducción a Ruby -->
+      <section id="introduccion-ruby" class="content-section">
         <div class="container">
-          <h2>Introducción a JavaScript</h2>
+          <h2>Introducción a Ruby</h2>
           <p>
-            JavaScript es un lenguaje de programación que se utiliza
-            principalmente para crear interactividad en las páginas web. Con
-            JavaScript, puedes manipular el DOM, manejar eventos, hacer
-            solicitudes HTTP, y mucho más. Aquí tienes un ejemplo básico:
+            Ruby es un lenguaje de programación dinámico y orientado a objetos,
+            conocido por su sintaxis elegante y su uso en el desarrollo web con
+            Ruby on Rails. Aquí tienes un ejemplo básico:
           </p>
           <div class="code-example">
             <div class="code-header">
-              <span>Ejemplo de JavaScript</span>
+              <span>Ejemplo de Ruby</span>
             </div>
-            <pre><code>// Hola Mundo en JavaScript
-console.log("¡Hola, Mundo!");</code></pre>
+            <pre><code># Hola Mundo en Ruby
+puts "¡Hola, Mundo!"</code></pre>
           </div>
         </div>
       </section>
 
-      <section id="variables-js" class="content-section">
+      <!-- Sección de Variables y Tipos de Datos -->
+      <section id="variables-ruby" class="content-section">
         <div class="container">
           <h2>Variables y Tipos de Datos</h2>
           <p>
-            En JavaScript, puedes declarar variables usando <code>let</code>,
-            <code>const</code> o <code>var</code>. Los tipos de datos incluyen
-            números, cadenas, booleanos, objetos, y más.
+            En Ruby, las variables no necesitan ser declaradas con un tipo
+            específico. Aquí tienes un ejemplo de cómo declarar variables y
+            trabajar con diferentes tipos de datos:
           </p>
           <div class="code-example">
             <div class="code-header">
               <span>Ejemplo de Variables</span>
             </div>
-            <pre><code>let nombre = "Juan";
-const edad = 25;
-var esEstudiante = true;
+            <pre><code>nombre = "Juan"
+edad = 25
+altura = 1.75
+es_estudiante = true
 
-console.log(nombre); // Juan
-console.log(edad); // 25
-console.log(esEstudiante); // true</code></pre>
+puts "Nombre: #{nombre}"
+puts "Edad: #{edad}"
+puts "Altura: #{altura}"
+puts "Es estudiante: #{es_estudiante}"</code></pre>
           </div>
         </div>
       </section>
 
-      <section id="funciones-js" class="content-section">
+      <!-- Sección de Estructuras de Control -->
+      <section id="estructuras-ruby" class="content-section">
         <div class="container">
-          <h2>Funciones en JavaScript</h2>
+          <h2>Estructuras de Control</h2>
           <p>
-            Las funciones son bloques de código que puedes reutilizar. Puedes
-            definir funciones con la palabra clave <code>function</code> o
-            usando arrow functions.
+            Las estructuras de control permiten tomar decisiones y repetir
+            bloques de código. Aquí tienes ejemplos de <code>if</code>,
+            <code>for</code>, y <code>while</code>:
           </p>
           <div class="code-example">
             <div class="code-header">
-              <span>Ejemplo de Funciones</span>
+              <span>Ejemplo de Estructuras de Control</span>
             </div>
-            <pre><code>// Función tradicional
-function saludar(nombre) {
-  return "Hola, " + nombre;
+            <pre><code># if-else
+if edad > 18
+  puts "Eres mayor de edad."
+else
+  puts "Eres menor de edad."
+end
+
+# for loop
+for i in 0..4
+  puts "Iteración: #{i}"
+end
+
+# while loop
+i = 0
+while i < 5
+  puts "Iteración: #{i}"
+  i += 1
+end</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección de Métodos -->
+      <section id="metodos-ruby" class="content-section">
+        <div class="container">
+          <h2>Métodos en Ruby</h2>
+          <p>
+            Los métodos en Ruby permiten modularizar el código. Aquí tienes un
+            ejemplo de un método que suma dos números:
+          </p>
+          <div class="code-example">
+            <div class="code-header">
+              <span>Ejemplo de Métodos</span>
+            </div>
+            <pre><code>def suma(a, b)
+  a + b
+end
+
+resultado = suma(5, 3)
+puts "La suma es: #{resultado}"</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección de Arrays y Hashes -->
+      <section id="arrays-ruby" class="content-section">
+        <div class="container">
+          <h2>Arrays y Hashes</h2>
+          <p>
+            Los arrays y hashes son estructuras de datos fundamentales en Ruby.
+            Aquí tienes un ejemplo de cómo trabajar con ellas:
+          </p>
+          <div class="code-example">
+            <div class="code-header">
+              <span>Ejemplo de Arrays y Hashes</span>
+            </div>
+            <pre><code># Array
+numeros = [1, 2, 3, 4, 5]
+puts "Array de números: #{numeros}"
+
+# Hash
+persona = {
+  nombre: "Juan",
+  edad: 25,
+  es_estudiante: true
 }
-
-// Arrow function
-const despedir = (nombre) => {
-  return "Adiós, " + nombre;
-};
-
-console.log(saludar("Juan")); // Hola, Juan
-console.log(despedir("Juan")); // Adiós, Juan</code></pre>
+puts "Hash de persona: #{persona}"</code></pre>
           </div>
         </div>
       </section>
 
-      <section id="dom-js" class="content-section">
+      <!-- Sección de Manejo de Archivos -->
+      <section id="archivos-ruby" class="content-section">
         <div class="container">
-          <h2>Manipulación del DOM</h2>
+          <h2>Manejo de Archivos</h2>
           <p>
-            JavaScript te permite seleccionar y manipular elementos del DOM para
-            cambiar el contenido, estilo, o estructura de una página web.
+            En Ruby, puedes leer y escribir archivos de manera sencilla. Aquí
+            tienes un ejemplo de cómo hacerlo:
           </p>
           <div class="code-example">
             <div class="code-header">
-              <span>Ejemplo de Manipulación del DOM</span>
+              <span>Ejemplo de Manejo de Archivos</span>
             </div>
-            <pre><code>// Seleccionar un elemento por su ID
-const titulo = document.getElementById("titulo");
+            <pre><code># Escribir en un archivo
+File.open("archivo.txt", "w") do |archivo|
+  archivo.puts "Hola, este es un archivo de texto."
+end
 
-// Cambiar el contenido del elemento
-titulo.textContent = "¡Nuevo Título!";
-
-// Cambiar el estilo
-titulo.style.color = "red";</code></pre>
-          </div>
-        </div>
-      </section>
-
-      <section id="eventos-js" class="content-section">
-        <div class="container">
-          <h2>Eventos en JavaScript</h2>
-          <p>
-            Los eventos permiten que tu página web responda a las acciones del
-            usuario, como clics, cambios en los campos de entrada, etc.
-          </p>
-          <div class="code-example">
-            <div class="code-header">
-              <span>Ejemplo de Eventos</span>
-            </div>
-            <pre><code>// Seleccionar un botón
-const boton = document.getElementById("miBoton");
-
-// Agregar un evento de clic
-boton.addEventListener("click", () => {
-  alert("¡Botón clickeado!");
-});</code></pre>
-          </div>
-        </div>
-      </section>
-
-      <section id="ajax-js" class="content-section">
-        <div class="container">
-          <h2>AJAX y Fetch API</h2>
-          <p>
-            Con Fetch API, puedes hacer solicitudes HTTP asíncronas para obtener
-            datos de un servidor sin recargar la página.
-          </p>
-          <div class="code-example">
-            <div class="code-header">
-              <span>Ejemplo de Fetch API</span>
-            </div>
-            <pre><code>// Obtener datos de una API
-fetch('https://jsonplaceholder.typicode.com/posts/1')
-  .then(response => response.json())
-  .then(data => console.log(data))
-  .catch(error => console.error('Error:', error));</code></pre>
+# Leer un archivo
+File.open("archivo.txt", "r") do |archivo|
+  contenido = archivo.read
+  puts "Contenido del archivo: #{contenido}"
+end</code></pre>
           </div>
         </div>
       </section>
 
       <!-- Sección de Ejercicios Prácticos -->
-      <section id="ejercicios-js" class="content-section">
+      <section id="ejercicios-ruby" class="content-section">
         <div class="container">
           <h2>Ejercicios Prácticos</h2>
           <p>
             Aquí tienes algunos ejercicios para practicar tus habilidades en
-            JavaScript:
+            Ruby:
           </p>
           <div class="list-box">
             <h3>Ejercicio 1: Suma de dos números</h3>
             <p>
-              Escribe una función que tome dos números como argumentos y
-              devuelva su suma.
+              Escribe un método que tome dos números como argumentos y devuelva
+              su suma.
             </p>
           </div>
           <div class="list-box">
-            <h3>Ejercicio 2: Manipulación del DOM</h3>
-            <p>
-              Crea un botón que, al hacer clic, cambie el texto de un elemento
-              en la página.
-            </p>
+            <h3>Ejercicio 2: Array de números pares</h3>
+            <p>Crea un array que contenga los primeros 10 números pares.</p>
           </div>
           <div class="list-box">
-            <h3>Ejercicio 3: Fetch API</h3>
+            <h3>Ejercicio 3: Manejo de archivos</h3>
             <p>
-              Usa Fetch API para obtener datos de una API pública y muestra los
-              resultados en la página.
+              Escribe un programa que lea un archivo de texto y cuente el número
+              de palabras.
             </p>
           </div>
         </div>

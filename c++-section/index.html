@@ -447,194 +447,270 @@
     </div>
 
     <div class="davodev-section">
-      <img src="../assets/images/JS-LETTER.png" alt="" />
+      <img src="../assets/images/C++-LETTERS.png" alt="" />
     </div>
 
     <nav class="main-nav">
       <div class="container">
-        <a href="#introduccion-js">Introducción</a>
-        <a href="#variables-js">Variables</a>
-        <a href="#funciones-js">Funciones</a>
-        <a href="#dom-js">DOM</a>
-        <a href="#eventos-js">Eventos</a>
-        <a href="#ajax-js">Ajax</a>
-        <a href="#ejercicios-js">Ejercicios</a>
+        <a href="#introduccion-cpp">Introducción</a>
+        <a href="#clases-cpp">Clases</a>
+        <a href="#herencia-cpp">Herencia</a>
+        <a href="#polimorfismo-cpp">Polimorfismo</a>
+        <a href="#memoria-cpp">Memoria</a>
+        <a href="#stl-cpp">STL</a>
+        <a href="#ejercicios-cpp">Ejercicios</a>
       </div>
     </nav>
 
     <main class="container">
       <section class="welcome-section">
-        <h1>¡Bienvenido a la Guía de JAVASCRIPT!</h1>
+        <h1>¡Bienvenido a la Guía de C++</h1>
         <p>
-          JavaScript es un lenguaje de programación que permite crear contenido
-          dinámico en las páginas web. 🌐 Con JavaScript, puedes hacer que tu
-          sitio web sea interactivo, responder a eventos del usuario, manipular
-          el DOM, y mucho más. 🚀 ¡Es una habilidad esencial para cualquier
-          desarrollador web! 💻
+          C++ es un lenguaje de programación de propósito general que ha sido
+          fundamental en el desarrollo de sistemas operativos, aplicaciones de
+          alto rendimiento, videojuegos y más. 🖥️ Con C++, puedes escribir
+          código eficiente y tener un control preciso sobre el hardware, además
+          de aprovechar las ventajas de la programación orientada a objetos. ⚙️
+          ¡Es una habilidad esencial para cualquier desarrollador de software!
+          💻
         </p>
       </section>
-      <section id="introduccion-js" class="content-section">
+      <!-- Sección de Introducción a C++ -->
+      <section id="introduccion-cpp" class="content-section">
         <div class="container">
-          <h2>Introducción a JavaScript</h2>
+          <h2>Introducción a C++</h2>
           <p>
-            JavaScript es un lenguaje de programación que se utiliza
-            principalmente para crear interactividad en las páginas web. Con
-            JavaScript, puedes manipular el DOM, manejar eventos, hacer
-            solicitudes HTTP, y mucho más. Aquí tienes un ejemplo básico:
+            C++ es un lenguaje de programación orientado a objetos que extiende
+            las capacidades de C. Es ampliamente utilizado en desarrollo de
+            sistemas, videojuegos, aplicaciones de alto rendimiento y más. Aquí
+            tienes un ejemplo básico:
           </p>
           <div class="code-example">
             <div class="code-header">
-              <span>Ejemplo de JavaScript</span>
+              <span>Ejemplo de C++</span>
             </div>
-            <pre><code>// Hola Mundo en JavaScript
-console.log("¡Hola, Mundo!");</code></pre>
+            <pre><code>#include &lt;iostream&gt;
+
+int main() {
+    std::cout << "¡Hola, Mundo!" << std::endl;
+    return 0;
+}</code></pre>
           </div>
         </div>
       </section>
 
-      <section id="variables-js" class="content-section">
+      <!-- Sección de Clases y Objetos -->
+      <section id="clases-cpp" class="content-section">
         <div class="container">
-          <h2>Variables y Tipos de Datos</h2>
+          <h2>Clases y Objetos</h2>
           <p>
-            En JavaScript, puedes declarar variables usando <code>let</code>,
-            <code>const</code> o <code>var</code>. Los tipos de datos incluyen
-            números, cadenas, booleanos, objetos, y más.
+            En C++, las clases son la base de la programación orientada a
+            objetos. Aquí tienes un ejemplo de cómo definir una clase y crear un
+            objeto:
           </p>
           <div class="code-example">
             <div class="code-header">
-              <span>Ejemplo de Variables</span>
+              <span>Ejemplo de Clases y Objetos</span>
             </div>
-            <pre><code>let nombre = "Juan";
-const edad = 25;
-var esEstudiante = true;
+            <pre><code>#include &lt;iostream&gt;
 
-console.log(nombre); // Juan
-console.log(edad); // 25
-console.log(esEstudiante); // true</code></pre>
-          </div>
-        </div>
-      </section>
+class Persona {
+public:
+    std::string nombre;
+    int edad;
 
-      <section id="funciones-js" class="content-section">
-        <div class="container">
-          <h2>Funciones en JavaScript</h2>
-          <p>
-            Las funciones son bloques de código que puedes reutilizar. Puedes
-            definir funciones con la palabra clave <code>function</code> o
-            usando arrow functions.
-          </p>
-          <div class="code-example">
-            <div class="code-header">
-              <span>Ejemplo de Funciones</span>
-            </div>
-            <pre><code>// Función tradicional
-function saludar(nombre) {
-  return "Hola, " + nombre;
-}
-
-// Arrow function
-const despedir = (nombre) => {
-  return "Adiós, " + nombre;
+    void saludar() {
+        std::cout << "Hola, mi nombre es " << nombre << " y tengo " << edad << " años." << std::endl;
+    }
 };
 
-console.log(saludar("Juan")); // Hola, Juan
-console.log(despedir("Juan")); // Adiós, Juan</code></pre>
+int main() {
+    Persona persona1;
+    persona1.nombre = "Juan";
+    persona1.edad = 25;
+    persona1.saludar();
+
+    return 0;
+}</code></pre>
           </div>
         </div>
       </section>
 
-      <section id="dom-js" class="content-section">
+      <!-- Sección de Herencia -->
+      <section id="herencia-cpp" class="content-section">
         <div class="container">
-          <h2>Manipulación del DOM</h2>
+          <h2>Herencia en C++</h2>
           <p>
-            JavaScript te permite seleccionar y manipular elementos del DOM para
-            cambiar el contenido, estilo, o estructura de una página web.
+            La herencia permite crear nuevas clases a partir de clases
+            existentes. Aquí tienes un ejemplo de herencia:
           </p>
           <div class="code-example">
             <div class="code-header">
-              <span>Ejemplo de Manipulación del DOM</span>
+              <span>Ejemplo de Herencia</span>
             </div>
-            <pre><code>// Seleccionar un elemento por su ID
-const titulo = document.getElementById("titulo");
+            <pre><code>#include &lt;iostream&gt;
 
-// Cambiar el contenido del elemento
-titulo.textContent = "¡Nuevo Título!";
+class Animal {
+public:
+    void comer() {
+        std::cout << "Este animal está comiendo." << std::endl;
+    }
+};
 
-// Cambiar el estilo
-titulo.style.color = "red";</code></pre>
+class Perro : public Animal {
+public:
+    void ladrar() {
+        std::cout << "¡Guau guau!" << std::endl;
+    }
+};
+
+int main() {
+    Perro miPerro;
+    miPerro.comer();
+    miPerro.ladrar();
+
+    return 0;
+}</code></pre>
           </div>
         </div>
       </section>
 
-      <section id="eventos-js" class="content-section">
+      <!-- Sección de Polimorfismo -->
+      <section id="polimorfismo-cpp" class="content-section">
         <div class="container">
-          <h2>Eventos en JavaScript</h2>
+          <h2>Polimorfismo en C++</h2>
           <p>
-            Los eventos permiten que tu página web responda a las acciones del
-            usuario, como clics, cambios en los campos de entrada, etc.
+            El polimorfismo permite que objetos de diferentes clases sean
+            tratados como objetos de una clase base. Aquí tienes un ejemplo
+            usando funciones virtuales:
           </p>
           <div class="code-example">
             <div class="code-header">
-              <span>Ejemplo de Eventos</span>
+              <span>Ejemplo de Polimorfismo</span>
             </div>
-            <pre><code>// Seleccionar un botón
-const boton = document.getElementById("miBoton");
+            <pre><code>#include &lt;iostream&gt;
 
-// Agregar un evento de clic
-boton.addEventListener("click", () => {
-  alert("¡Botón clickeado!");
-});</code></pre>
+class Animal {
+public:
+    virtual void hacerSonido() {
+        std::cout << "Este animal hace un sonido." << std::endl;
+    }
+};
+
+class Perro : public Animal {
+public:
+    void hacerSonido() override {
+        std::cout << "¡Guau guau!" << std::endl;
+    }
+};
+
+class Gato : public Animal {
+public:
+    void hacerSonido() override {
+        std::cout << "¡Miau miau!" << std::endl;
+    }
+};
+
+int main() {
+    Animal* miAnimal1 = new Perro();
+    Animal* miAnimal2 = new Gato();
+
+    miAnimal1->hacerSonido();
+    miAnimal2->hacerSonido();
+
+    delete miAnimal1;
+    delete miAnimal2;
+
+    return 0;
+}</code></pre>
           </div>
         </div>
       </section>
 
-      <section id="ajax-js" class="content-section">
+      <!-- Sección de Manejo de Memoria -->
+      <section id="memoria-cpp" class="content-section">
         <div class="container">
-          <h2>AJAX y Fetch API</h2>
+          <h2>Manejo de Memoria en C++</h2>
           <p>
-            Con Fetch API, puedes hacer solicitudes HTTP asíncronas para obtener
-            datos de un servidor sin recargar la página.
+            En C++, puedes manejar memoria dinámica usando <code>new</code> y
+            <code>delete</code>. Aquí tienes un ejemplo:
           </p>
           <div class="code-example">
             <div class="code-header">
-              <span>Ejemplo de Fetch API</span>
+              <span>Ejemplo de Manejo de Memoria</span>
             </div>
-            <pre><code>// Obtener datos de una API
-fetch('https://jsonplaceholder.typicode.com/posts/1')
-  .then(response => response.json())
-  .then(data => console.log(data))
-  .catch(error => console.error('Error:', error));</code></pre>
+            <pre><code>#include &lt;iostream&gt;
+
+int main() {
+    int* numero = new int(10);
+    std::cout << "Número: " << *numero << std::endl;
+
+    delete numero; // Liberar la memoria
+
+    return 0;
+}</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección de STL (Standard Template Library) -->
+      <section id="stl-cpp" class="content-section">
+        <div class="container">
+          <h2>STL (Standard Template Library)</h2>
+          <p>
+            La STL es una colección de plantillas de clases y funciones que
+            proporcionan estructuras de datos y algoritmos comunes. Aquí tienes
+            un ejemplo de uso de un vector:
+          </p>
+          <div class="code-example">
+            <div class="code-header">
+              <span>Ejemplo de STL</span>
+            </div>
+            <pre><code>#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+int main() {
+    std::vector&lt;int&gt; numeros = {1, 2, 3, 4, 5};
+
+    for (int i = 0; i < numeros.size(); i++) {
+        std::cout << numeros[i] << " ";
+    }
+
+    return 0;
+}</code></pre>
           </div>
         </div>
       </section>
 
       <!-- Sección de Ejercicios Prácticos -->
-      <section id="ejercicios-js" class="content-section">
+      <section id="ejercicios-cpp" class="content-section">
         <div class="container">
           <h2>Ejercicios Prácticos</h2>
           <p>
             Aquí tienes algunos ejercicios para practicar tus habilidades en
-            JavaScript:
+            C++:
           </p>
           <div class="list-box">
-            <h3>Ejercicio 1: Suma de dos números</h3>
+            <h3>Ejercicio 1: Clase Punto</h3>
             <p>
-              Escribe una función que tome dos números como argumentos y
-              devuelva su suma.
+              Crea una clase <code>Punto</code> que represente un punto en un
+              plano 2D con coordenadas (x, y). Añade un método para calcular la
+              distancia entre dos puntos.
             </p>
           </div>
           <div class="list-box">
-            <h3>Ejercicio 2: Manipulación del DOM</h3>
+            <h3>Ejercicio 2: Herencia</h3>
             <p>
-              Crea un botón que, al hacer clic, cambie el texto de un elemento
-              en la página.
+              Crea una clase base <code>Vehiculo</code> y dos clases derivadas
+              <code>Coche</code> y <code>Moto</code>. Implementa métodos
+              específicos para cada tipo de vehículo.
             </p>
           </div>
           <div class="list-box">
-            <h3>Ejercicio 3: Fetch API</h3>
+            <h3>Ejercicio 3: STL</h3>
             <p>
-              Usa Fetch API para obtener datos de una API pública y muestra los
-              resultados en la página.
+              Usa un <code>std::map</code> para almacenar nombres de personas y
+              sus edades. Luego, imprime el contenido del mapa.
             </p>
           </div>
         </div>

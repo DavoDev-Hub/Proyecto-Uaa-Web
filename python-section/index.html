@@ -447,174 +447,190 @@
     </div>
 
     <div class="davodev-section">
-      <img src="../assets/images/JS-LETTER.png" alt="" />
+      <img src="../assets/images/PYTHON-LETTER.png" alt="" />
     </div>
 
     <nav class="main-nav">
       <div class="container">
-        <a href="#introduccion-js">Introducción</a>
-        <a href="#variables-js">Variables</a>
-        <a href="#funciones-js">Funciones</a>
-        <a href="#dom-js">DOM</a>
-        <a href="#eventos-js">Eventos</a>
-        <a href="#ajax-js">Ajax</a>
-        <a href="#ejercicios-js">Ejercicios</a>
+        <a href="#introduccion-python">Introducción</a>
+        <a href="#variables-python">Variables</a>
+        <a href="#estructuras-python">Estructuras</a>
+        <a href="#funciones-python">Funciones</a>
+        <a href="#listas-python">Listas</a>
+        <a href="#archivos-python">Archivos</a>
+        <a href="#ejercicios-python">Ejercicios</a>
       </div>
     </nav>
 
     <main class="container">
       <section class="welcome-section">
-        <h1>¡Bienvenido a la Guía de JAVASCRIPT!</h1>
+        <h1>¡Bienvenido a la Guía de Python!</h1>
         <p>
-          JavaScript es un lenguaje de programación que permite crear contenido
-          dinámico en las páginas web. 🌐 Con JavaScript, puedes hacer que tu
-          sitio web sea interactivo, responder a eventos del usuario, manipular
-          el DOM, y mucho más. 🚀 ¡Es una habilidad esencial para cualquier
-          desarrollador web! 💻
+          Python es un lenguaje de programación de alto nivel, interpretado y
+          multipropósito. Es conocido por su sintaxis sencilla y legible, lo que
+          lo hace ideal para principiantes y expertos. 🐍 Con Python, puedes
+          desarrollar aplicaciones web, análisis de datos, inteligencia
+          artificial, y mucho más. 🌐 ¡Es una herramienta poderosa para
+          cualquier desarrollador de software! 💻
         </p>
       </section>
-      <section id="introduccion-js" class="content-section">
+      <!-- Sección de Introducción a Python -->
+      <section id="introduccion-python" class="content-section">
         <div class="container">
-          <h2>Introducción a JavaScript</h2>
+          <h2>Introducción a Python</h2>
           <p>
-            JavaScript es un lenguaje de programación que se utiliza
-            principalmente para crear interactividad en las páginas web. Con
-            JavaScript, puedes manipular el DOM, manejar eventos, hacer
-            solicitudes HTTP, y mucho más. Aquí tienes un ejemplo básico:
+            Python es un lenguaje de programación de alto nivel, interpretado y
+            multipropósito. Es conocido por su sintaxis sencilla y legible, lo
+            que lo hace ideal para principiantes y expertos. Aquí tienes un
+            ejemplo básico:
           </p>
           <div class="code-example">
             <div class="code-header">
-              <span>Ejemplo de JavaScript</span>
+              <span>Ejemplo de Python</span>
             </div>
-            <pre><code>// Hola Mundo en JavaScript
-console.log("¡Hola, Mundo!");</code></pre>
+            <pre><code># Hola Mundo en Python
+print("¡Hola, Mundo!")</code></pre>
           </div>
         </div>
       </section>
 
-      <section id="variables-js" class="content-section">
+      <!-- Sección de Variables y Tipos de Datos -->
+      <section id="variables-python" class="content-section">
         <div class="container">
           <h2>Variables y Tipos de Datos</h2>
           <p>
-            En JavaScript, puedes declarar variables usando <code>let</code>,
-            <code>const</code> o <code>var</code>. Los tipos de datos incluyen
-            números, cadenas, booleanos, objetos, y más.
+            En Python, las variables no necesitan ser declaradas con un tipo
+            específico. Aquí tienes un ejemplo de cómo declarar variables y
+            trabajar con diferentes tipos de datos:
           </p>
           <div class="code-example">
             <div class="code-header">
               <span>Ejemplo de Variables</span>
             </div>
-            <pre><code>let nombre = "Juan";
-const edad = 25;
-var esEstudiante = true;
+            <pre><code>nombre = "Juan"
+edad = 25
+altura = 1.75
+es_estudiante = True
 
-console.log(nombre); // Juan
-console.log(edad); // 25
-console.log(esEstudiante); // true</code></pre>
+print("Nombre:", nombre)
+print("Edad:", edad)
+print("Altura:", altura)
+print("Es estudiante:", es_estudiante)</code></pre>
           </div>
         </div>
       </section>
 
-      <section id="funciones-js" class="content-section">
+      <!-- Sección de Estructuras de Control -->
+      <section id="estructuras-python" class="content-section">
         <div class="container">
-          <h2>Funciones en JavaScript</h2>
+          <h2>Estructuras de Control</h2>
           <p>
-            Las funciones son bloques de código que puedes reutilizar. Puedes
-            definir funciones con la palabra clave <code>function</code> o
-            usando arrow functions.
+            Las estructuras de control permiten tomar decisiones y repetir
+            bloques de código. Aquí tienes ejemplos de <code>if</code>,
+            <code>for</code>, y <code>while</code>:
+          </p>
+          <div class="code-example">
+            <div class="code-header">
+              <span>Ejemplo de Estructuras de Control</span>
+            </div>
+            <pre><code># if-else
+if edad > 18:
+    print("Eres mayor de edad.")
+else:
+    print("Eres menor de edad.")
+
+# for loop
+for i in range(5):
+    print("Iteración:", i)
+
+# while loop
+i = 0
+while i < 5:
+    print("Iteración:", i)
+    i += 1</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección de Funciones -->
+      <section id="funciones-python" class="content-section">
+        <div class="container">
+          <h2>Funciones en Python</h2>
+          <p>
+            Las funciones en Python permiten modularizar el código. Aquí tienes
+            un ejemplo de una función que suma dos números:
           </p>
           <div class="code-example">
             <div class="code-header">
               <span>Ejemplo de Funciones</span>
             </div>
-            <pre><code>// Función tradicional
-function saludar(nombre) {
-  return "Hola, " + nombre;
+            <pre><code>def suma(a, b):
+    return a + b
+
+resultado = suma(5, 3)
+print("La suma es:", resultado)</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección de Listas y Diccionarios -->
+      <section id="listas-python" class="content-section">
+        <div class="container">
+          <h2>Listas y Diccionarios</h2>
+          <p>
+            Las listas y diccionarios son estructuras de datos fundamentales en
+            Python. Aquí tienes un ejemplo de cómo trabajar con ellas:
+          </p>
+          <div class="code-example">
+            <div class="code-header">
+              <span>Ejemplo de Listas y Diccionarios</span>
+            </div>
+            <pre><code># Lista
+numeros = [1, 2, 3, 4, 5]
+print("Lista de números:", numeros)
+
+# Diccionario
+persona = {
+    "nombre": "Juan",
+    "edad": 25,
+    "es_estudiante": True
 }
-
-// Arrow function
-const despedir = (nombre) => {
-  return "Adiós, " + nombre;
-};
-
-console.log(saludar("Juan")); // Hola, Juan
-console.log(despedir("Juan")); // Adiós, Juan</code></pre>
+print("Diccionario de persona:", persona)</code></pre>
           </div>
         </div>
       </section>
 
-      <section id="dom-js" class="content-section">
+      <!-- Sección de Manejo de Archivos -->
+      <section id="archivos-python" class="content-section">
         <div class="container">
-          <h2>Manipulación del DOM</h2>
+          <h2>Manejo de Archivos</h2>
           <p>
-            JavaScript te permite seleccionar y manipular elementos del DOM para
-            cambiar el contenido, estilo, o estructura de una página web.
+            En Python, puedes leer y escribir archivos de manera sencilla. Aquí
+            tienes un ejemplo de cómo hacerlo:
           </p>
           <div class="code-example">
             <div class="code-header">
-              <span>Ejemplo de Manipulación del DOM</span>
+              <span>Ejemplo de Manejo de Archivos</span>
             </div>
-            <pre><code>// Seleccionar un elemento por su ID
-const titulo = document.getElementById("titulo");
+            <pre><code># Escribir en un archivo
+with open("archivo.txt", "w") as archivo:
+    archivo.write("Hola, este es un archivo de texto.")
 
-// Cambiar el contenido del elemento
-titulo.textContent = "¡Nuevo Título!";
-
-// Cambiar el estilo
-titulo.style.color = "red";</code></pre>
-          </div>
-        </div>
-      </section>
-
-      <section id="eventos-js" class="content-section">
-        <div class="container">
-          <h2>Eventos en JavaScript</h2>
-          <p>
-            Los eventos permiten que tu página web responda a las acciones del
-            usuario, como clics, cambios en los campos de entrada, etc.
-          </p>
-          <div class="code-example">
-            <div class="code-header">
-              <span>Ejemplo de Eventos</span>
-            </div>
-            <pre><code>// Seleccionar un botón
-const boton = document.getElementById("miBoton");
-
-// Agregar un evento de clic
-boton.addEventListener("click", () => {
-  alert("¡Botón clickeado!");
-});</code></pre>
-          </div>
-        </div>
-      </section>
-
-      <section id="ajax-js" class="content-section">
-        <div class="container">
-          <h2>AJAX y Fetch API</h2>
-          <p>
-            Con Fetch API, puedes hacer solicitudes HTTP asíncronas para obtener
-            datos de un servidor sin recargar la página.
-          </p>
-          <div class="code-example">
-            <div class="code-header">
-              <span>Ejemplo de Fetch API</span>
-            </div>
-            <pre><code>// Obtener datos de una API
-fetch('https://jsonplaceholder.typicode.com/posts/1')
-  .then(response => response.json())
-  .then(data => console.log(data))
-  .catch(error => console.error('Error:', error));</code></pre>
+# Leer un archivo
+with open("archivo.txt", "r") as archivo:
+    contenido = archivo.read()
+    print("Contenido del archivo:", contenido)</code></pre>
           </div>
         </div>
       </section>
 
       <!-- Sección de Ejercicios Prácticos -->
-      <section id="ejercicios-js" class="content-section">
+      <section id="ejercicios-python" class="content-section">
         <div class="container">
           <h2>Ejercicios Prácticos</h2>
           <p>
             Aquí tienes algunos ejercicios para practicar tus habilidades en
-            JavaScript:
+            Python:
           </p>
           <div class="list-box">
             <h3>Ejercicio 1: Suma de dos números</h3>
@@ -624,17 +640,14 @@ fetch('https://jsonplaceholder.typicode.com/posts/1')
             </p>
           </div>
           <div class="list-box">
-            <h3>Ejercicio 2: Manipulación del DOM</h3>
-            <p>
-              Crea un botón que, al hacer clic, cambie el texto de un elemento
-              en la página.
-            </p>
+            <h3>Ejercicio 2: Lista de números pares</h3>
+            <p>Crea una lista que contenga los primeros 10 números pares.</p>
           </div>
           <div class="list-box">
-            <h3>Ejercicio 3: Fetch API</h3>
+            <h3>Ejercicio 3: Manejo de archivos</h3>
             <p>
-              Usa Fetch API para obtener datos de una API pública y muestra los
-              resultados en la página.
+              Escribe un programa que lea un archivo de texto y cuente el número
+              de palabras.
             </p>
           </div>
         </div>

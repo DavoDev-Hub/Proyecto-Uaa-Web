@@ -447,194 +447,237 @@
     </div>
 
     <div class="davodev-section">
-      <img src="../assets/images/JS-LETTER.png" alt="" />
+      <img src="../assets/images/MYSQL-LETTER.png" alt="" />
     </div>
 
     <nav class="main-nav">
       <div class="container">
-        <a href="#introduccion-js">Introducción</a>
-        <a href="#variables-js">Variables</a>
-        <a href="#funciones-js">Funciones</a>
-        <a href="#dom-js">DOM</a>
-        <a href="#eventos-js">Eventos</a>
-        <a href="#ajax-js">Ajax</a>
-        <a href="#ejercicios-js">Ejercicios</a>
+        <a href="#introduccion-mysql">Introducción</a>
+        <a href="#creacion-mysql">Creación</a>
+        <a href="#consultas-mysql">Consultas</a>
+        <a href="#crud-mysql">CRUD</a>
+        <a href="#consultas-avanzadas-mysql">Consultas Avanzadas</a>
+        <a href="#indices-mysql">Índices</a>
+        <a href="#ejercicios-mysql">Ejercicios</a>
       </div>
     </nav>
 
     <main class="container">
       <section class="welcome-section">
-        <h1>¡Bienvenido a la Guía de JAVASCRIPT!</h1>
+        <h1>¡Bienvenido a la Guía de MySQL!</h1>
         <p>
-          JavaScript es un lenguaje de programación que permite crear contenido
-          dinámico en las páginas web. 🌐 Con JavaScript, puedes hacer que tu
-          sitio web sea interactivo, responder a eventos del usuario, manipular
-          el DOM, y mucho más. 🚀 ¡Es una habilidad esencial para cualquier
-          desarrollador web! 💻
+          MySQL es un sistema de gestión de bases de datos relacional de código
+          abierto, muy popular y ampliamente utilizado en aplicaciones web. 🚀
+          Con MySQL, puedes almacenar, organizar y gestionar grandes cantidades
+          de datos de manera eficiente. 🌟 ¡Es una herramienta esencial para
+          cualquier desarrollador que trabaje con bases de datos! 💻
         </p>
       </section>
-      <section id="introduccion-js" class="content-section">
+
+      <!-- Sección de Introducción a MySQL -->
+      <section id="introduccion-mysql" class="content-section">
         <div class="container">
-          <h2>Introducción a JavaScript</h2>
+          <h2>Introducción a MySQL</h2>
           <p>
-            JavaScript es un lenguaje de programación que se utiliza
-            principalmente para crear interactividad en las páginas web. Con
-            JavaScript, puedes manipular el DOM, manejar eventos, hacer
-            solicitudes HTTP, y mucho más. Aquí tienes un ejemplo básico:
+            MySQL es un sistema de gestión de bases de datos relacionales de
+            código abierto, ampliamente utilizado en aplicaciones web y
+            empresariales. Aquí tienes un ejemplo básico de cómo conectarse a
+            una base de datos MySQL:
           </p>
           <div class="code-example">
             <div class="code-header">
-              <span>Ejemplo de JavaScript</span>
+              <span>Ejemplo de Conexión a MySQL</span>
             </div>
-            <pre><code>// Hola Mundo en JavaScript
-console.log("¡Hola, Mundo!");</code></pre>
+            <pre><code>import mysql.connector
+
+# Conectar a la base de datos
+conexion = mysql.connector.connect(
+    host="localhost",
+    user="usuario",
+    password="contraseña",
+    database="nombre_de_la_base_de_datos"
+)
+
+# Crear un cursor para ejecutar consultas
+cursor = conexion.cursor()
+
+# Ejecutar una consulta
+cursor.execute("SELECT * FROM tabla")
+
+# Cerrar la conexión
+cursor.close()
+conexion.close()</code></pre>
           </div>
         </div>
       </section>
 
-      <section id="variables-js" class="content-section">
+      <!-- Sección de Creación de Bases de Datos y Tablas -->
+      <section id="creacion-mysql" class="content-section">
         <div class="container">
-          <h2>Variables y Tipos de Datos</h2>
+          <h2>Creación de Bases de Datos y Tablas</h2>
           <p>
-            En JavaScript, puedes declarar variables usando <code>let</code>,
-            <code>const</code> o <code>var</code>. Los tipos de datos incluyen
-            números, cadenas, booleanos, objetos, y más.
+            En MySQL, puedes crear bases de datos y tablas usando comandos SQL.
+            Aquí tienes un ejemplo de cómo crear una base de datos y una tabla:
           </p>
           <div class="code-example">
             <div class="code-header">
-              <span>Ejemplo de Variables</span>
+              <span>Ejemplo de Creación de Base de Datos y Tabla</span>
             </div>
-            <pre><code>let nombre = "Juan";
-const edad = 25;
-var esEstudiante = true;
+            <pre><code>CREATE DATABASE mi_base_de_datos;
 
-console.log(nombre); // Juan
-console.log(edad); // 25
-console.log(esEstudiante); // true</code></pre>
+USE mi_base_de_datos;
+
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);</code></pre>
           </div>
         </div>
       </section>
 
-      <section id="funciones-js" class="content-section">
+      <!-- Sección de Consultas SQL Básicas -->
+      <section id="consultas-mysql" class="content-section">
         <div class="container">
-          <h2>Funciones en JavaScript</h2>
+          <h2>Consultas SQL Básicas</h2>
           <p>
-            Las funciones son bloques de código que puedes reutilizar. Puedes
-            definir funciones con la palabra clave <code>function</code> o
-            usando arrow functions.
+            Las consultas SQL básicas permiten realizar operaciones como
+            seleccionar, insertar, actualizar y eliminar datos. Aquí tienes
+            ejemplos de cada una:
           </p>
           <div class="code-example">
             <div class="code-header">
-              <span>Ejemplo de Funciones</span>
+              <span>Ejemplo de Consultas SQL</span>
             </div>
-            <pre><code>// Función tradicional
-function saludar(nombre) {
-  return "Hola, " + nombre;
-}
+            <pre><code>-- Seleccionar todos los registros de una tabla
+SELECT * FROM usuarios;
 
-// Arrow function
-const despedir = (nombre) => {
-  return "Adiós, " + nombre;
-};
+-- Insertar un nuevo registro
+INSERT INTO usuarios (nombre, email) VALUES ('Juan', 'juan@example.com');
 
-console.log(saludar("Juan")); // Hola, Juan
-console.log(despedir("Juan")); // Adiós, Juan</code></pre>
+-- Actualizar un registro
+UPDATE usuarios SET email = 'juan.nuevo@example.com' WHERE id = 1;
+
+-- Eliminar un registro
+DELETE FROM usuarios WHERE id = 1;</code></pre>
           </div>
         </div>
       </section>
 
-      <section id="dom-js" class="content-section">
+      <!-- Sección de Operaciones CRUD -->
+      <section id="crud-mysql" class="content-section">
         <div class="container">
-          <h2>Manipulación del DOM</h2>
+          <h2>Operaciones CRUD</h2>
           <p>
-            JavaScript te permite seleccionar y manipular elementos del DOM para
-            cambiar el contenido, estilo, o estructura de una página web.
+            Las operaciones CRUD (Crear, Leer, Actualizar, Eliminar) son
+            fundamentales en el manejo de bases de datos. Aquí tienes un ejemplo
+            de cómo realizar estas operaciones en MySQL:
           </p>
           <div class="code-example">
             <div class="code-header">
-              <span>Ejemplo de Manipulación del DOM</span>
+              <span>Ejemplo de Operaciones CRUD</span>
             </div>
-            <pre><code>// Seleccionar un elemento por su ID
-const titulo = document.getElementById("titulo");
+            <pre><code>-- Crear (Insertar)
+INSERT INTO usuarios (nombre, email) VALUES ('Ana', 'ana@example.com');
 
-// Cambiar el contenido del elemento
-titulo.textContent = "¡Nuevo Título!";
+-- Leer (Seleccionar)
+SELECT * FROM usuarios WHERE nombre = 'Ana';
 
-// Cambiar el estilo
-titulo.style.color = "red";</code></pre>
+-- Actualizar
+UPDATE usuarios SET email = 'ana.nuevo@example.com' WHERE nombre = 'Ana';
+
+-- Eliminar
+DELETE FROM usuarios WHERE nombre = 'Ana';</code></pre>
           </div>
         </div>
       </section>
 
-      <section id="eventos-js" class="content-section">
+      <!-- Sección de Consultas Avanzadas -->
+      <section id="consultas-avanzadas-mysql" class="content-section">
         <div class="container">
-          <h2>Eventos en JavaScript</h2>
+          <h2>Consultas Avanzadas</h2>
           <p>
-            Los eventos permiten que tu página web responda a las acciones del
-            usuario, como clics, cambios en los campos de entrada, etc.
+            Las consultas avanzadas permiten realizar operaciones más complejas,
+            como unir tablas, agrupar datos y ordenar resultados. Aquí tienes
+            ejemplos de consultas avanzadas:
           </p>
           <div class="code-example">
             <div class="code-header">
-              <span>Ejemplo de Eventos</span>
+              <span>Ejemplo de Consultas Avanzadas</span>
             </div>
-            <pre><code>// Seleccionar un botón
-const boton = document.getElementById("miBoton");
+            <pre><code>-- JOIN (Unir tablas)
+SELECT usuarios.nombre, pedidos.producto
+FROM usuarios
+JOIN pedidos ON usuarios.id = pedidos.usuario_id;
 
-// Agregar un evento de clic
-boton.addEventListener("click", () => {
-  alert("¡Botón clickeado!");
-});</code></pre>
+-- GROUP BY (Agrupar datos)
+SELECT COUNT(*) AS total_usuarios, pais
+FROM usuarios
+GROUP BY pais;
+
+-- ORDER BY (Ordenar resultados)
+SELECT * FROM usuarios
+ORDER BY fecha_registro DESC;</code></pre>
           </div>
         </div>
       </section>
 
-      <section id="ajax-js" class="content-section">
+      <!-- Sección de Manejo de Índices y Claves -->
+      <section id="indices-mysql" class="content-section">
         <div class="container">
-          <h2>AJAX y Fetch API</h2>
+          <h2>Manejo de Índices y Claves</h2>
           <p>
-            Con Fetch API, puedes hacer solicitudes HTTP asíncronas para obtener
-            datos de un servidor sin recargar la página.
+            Los índices y claves mejoran el rendimiento de las consultas y
+            aseguran la integridad de los datos. Aquí tienes un ejemplo de cómo
+            crear índices y claves:
           </p>
           <div class="code-example">
             <div class="code-header">
-              <span>Ejemplo de Fetch API</span>
+              <span>Ejemplo de Índices y Claves</span>
             </div>
-            <pre><code>// Obtener datos de una API
-fetch('https://jsonplaceholder.typicode.com/posts/1')
-  .then(response => response.json())
-  .then(data => console.log(data))
-  .catch(error => console.error('Error:', error));</code></pre>
+            <pre><code>-- Crear un índice
+CREATE INDEX idx_nombre ON usuarios (nombre);
+
+-- Crear una clave primaria
+ALTER TABLE usuarios ADD PRIMARY KEY (id);
+
+-- Crear una clave foránea
+ALTER TABLE pedidos
+ADD CONSTRAINT fk_usuario
+FOREIGN KEY (usuario_id) REFERENCES usuarios(id);</code></pre>
           </div>
         </div>
       </section>
 
       <!-- Sección de Ejercicios Prácticos -->
-      <section id="ejercicios-js" class="content-section">
+      <section id="ejercicios-mysql" class="content-section">
         <div class="container">
           <h2>Ejercicios Prácticos</h2>
           <p>
             Aquí tienes algunos ejercicios para practicar tus habilidades en
-            JavaScript:
+            MySQL:
           </p>
           <div class="list-box">
-            <h3>Ejercicio 1: Suma de dos números</h3>
+            <h3>Ejercicio 1: Crear una Base de Datos</h3>
             <p>
-              Escribe una función que tome dos números como argumentos y
-              devuelva su suma.
+              Crea una base de datos llamada <code>biblioteca</code> y una tabla
+              llamada <code>libros</code> con columnas para el título, autor y
+              año de publicación.
             </p>
           </div>
           <div class="list-box">
-            <h3>Ejercicio 2: Manipulación del DOM</h3>
+            <h3>Ejercicio 2: Consultas Básicas</h3>
             <p>
-              Crea un botón que, al hacer clic, cambie el texto de un elemento
-              en la página.
+              Escribe una consulta para seleccionar todos los libros publicados
+              después del año 2000.
             </p>
           </div>
           <div class="list-box">
-            <h3>Ejercicio 3: Fetch API</h3>
+            <h3>Ejercicio 3: Consultas Avanzadas</h3>
             <p>
-              Usa Fetch API para obtener datos de una API pública y muestra los
-              resultados en la página.
+              Escribe una consulta que muestre el número de libros por autor,
+              ordenados de mayor a menor.
             </p>
           </div>
         </div>

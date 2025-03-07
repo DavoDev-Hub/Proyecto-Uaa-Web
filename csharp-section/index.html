@@ -447,194 +447,294 @@
     </div>
 
     <div class="davodev-section">
-      <img src="../assets/images/JS-LETTER.png" alt="" />
+      <img src="../assets/images/Csharp-LETTER.png" alt="" />
     </div>
 
     <nav class="main-nav">
       <div class="container">
-        <a href="#introduccion-js">Introducción</a>
-        <a href="#variables-js">Variables</a>
-        <a href="#funciones-js">Funciones</a>
-        <a href="#dom-js">DOM</a>
-        <a href="#eventos-js">Eventos</a>
-        <a href="#ajax-js">Ajax</a>
-        <a href="#ejercicios-js">Ejercicios</a>
+        <a href="#introduccion-csharp">Introducción</a>
+        <a href="#clases-csharp">Clases</a>
+        <a href="#herencia-csharp">Herencia</a>
+        <a href="#polimorfismo-csharp">Polimorfismo</a>
+        <a href="#excepciones-csharp">Excepciones</a>
+        <a href="#colecciones-csharp">Colecciones</a>
+        <a href="#ejercicios-csharp">Ejercicios</a>
       </div>
     </nav>
 
     <main class="container">
       <section class="welcome-section">
-        <h1>¡Bienvenido a la Guía de JAVASCRIPT!</h1>
+        <h1>¡Bienvenido a la Guía de C#!</h1>
         <p>
-          JavaScript es un lenguaje de programación que permite crear contenido
-          dinámico en las páginas web. 🌐 Con JavaScript, puedes hacer que tu
-          sitio web sea interactivo, responder a eventos del usuario, manipular
-          el DOM, y mucho más. 🚀 ¡Es una habilidad esencial para cualquier
-          desarrollador web! 💻
+          C# es un lenguaje de programación moderno y orientado a objetos,
+          desarrollado por Microsoft. Es ampliamente utilizado en el desarrollo
+          de aplicaciones de escritorio, aplicaciones web, videojuegos con
+          Unity, y mucho más. 🚀 Con C#, puedes crear aplicaciones robustas y
+          escalables de manera eficiente. 🌟 ¡Es una herramienta esencial para
+          cualquier desarrollador de software! 💻
         </p>
       </section>
-      <section id="introduccion-js" class="content-section">
+
+      <!-- Sección de Introducción a C# -->
+      <section id="introduccion-csharp" class="content-section">
         <div class="container">
-          <h2>Introducción a JavaScript</h2>
+          <h2>Introducción a C#</h2>
           <p>
-            JavaScript es un lenguaje de programación que se utiliza
-            principalmente para crear interactividad en las páginas web. Con
-            JavaScript, puedes manipular el DOM, manejar eventos, hacer
-            solicitudes HTTP, y mucho más. Aquí tienes un ejemplo básico:
+            C# es un lenguaje de programación orientado a objetos desarrollado
+            por Microsoft, ampliamente utilizado en el desarrollo de
+            aplicaciones .NET, videojuegos (Unity) y más. Aquí tienes un ejemplo
+            básico:
           </p>
           <div class="code-example">
             <div class="code-header">
-              <span>Ejemplo de JavaScript</span>
+              <span>Ejemplo de C#</span>
             </div>
-            <pre><code>// Hola Mundo en JavaScript
-console.log("¡Hola, Mundo!");</code></pre>
+            <pre><code>using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("¡Hola, Mundo!");
+    }
+}</code></pre>
           </div>
         </div>
       </section>
 
-      <section id="variables-js" class="content-section">
+      <!-- Sección de Clases y Objetos -->
+      <section id="clases-csharp" class="content-section">
         <div class="container">
-          <h2>Variables y Tipos de Datos</h2>
+          <h2>Clases y Objetos</h2>
           <p>
-            En JavaScript, puedes declarar variables usando <code>let</code>,
-            <code>const</code> o <code>var</code>. Los tipos de datos incluyen
-            números, cadenas, booleanos, objetos, y más.
+            En C#, las clases son la base de la programación orientada a
+            objetos. Aquí tienes un ejemplo de cómo definir una clase y crear un
+            objeto:
           </p>
           <div class="code-example">
             <div class="code-header">
-              <span>Ejemplo de Variables</span>
+              <span>Ejemplo de Clases y Objetos</span>
             </div>
-            <pre><code>let nombre = "Juan";
-const edad = 25;
-var esEstudiante = true;
+            <pre><code>using System;
 
-console.log(nombre); // Juan
-console.log(edad); // 25
-console.log(esEstudiante); // true</code></pre>
-          </div>
-        </div>
-      </section>
+class Persona
+{
+    public string Nombre;
+    public int Edad;
 
-      <section id="funciones-js" class="content-section">
-        <div class="container">
-          <h2>Funciones en JavaScript</h2>
-          <p>
-            Las funciones son bloques de código que puedes reutilizar. Puedes
-            definir funciones con la palabra clave <code>function</code> o
-            usando arrow functions.
-          </p>
-          <div class="code-example">
-            <div class="code-header">
-              <span>Ejemplo de Funciones</span>
-            </div>
-            <pre><code>// Función tradicional
-function saludar(nombre) {
-  return "Hola, " + nombre;
+    public void Saludar()
+    {
+        Console.WriteLine($"Hola, mi nombre es {Nombre} y tengo {Edad} años.");
+    }
 }
 
-// Arrow function
-const despedir = (nombre) => {
-  return "Adiós, " + nombre;
-};
-
-console.log(saludar("Juan")); // Hola, Juan
-console.log(despedir("Juan")); // Adiós, Juan</code></pre>
+class Program
+{
+    static void Main()
+    {
+        Persona persona1 = new Persona();
+        persona1.Nombre = "Juan";
+        persona1.Edad = 25;
+        persona1.Saludar();
+    }
+}</code></pre>
           </div>
         </div>
       </section>
 
-      <section id="dom-js" class="content-section">
+      <!-- Sección de Herencia -->
+      <section id="herencia-csharp" class="content-section">
         <div class="container">
-          <h2>Manipulación del DOM</h2>
+          <h2>Herencia en C#</h2>
           <p>
-            JavaScript te permite seleccionar y manipular elementos del DOM para
-            cambiar el contenido, estilo, o estructura de una página web.
+            La herencia permite crear nuevas clases a partir de clases
+            existentes. Aquí tienes un ejemplo de herencia:
           </p>
           <div class="code-example">
             <div class="code-header">
-              <span>Ejemplo de Manipulación del DOM</span>
+              <span>Ejemplo de Herencia</span>
             </div>
-            <pre><code>// Seleccionar un elemento por su ID
-const titulo = document.getElementById("titulo");
+            <pre><code>using System;
 
-// Cambiar el contenido del elemento
-titulo.textContent = "¡Nuevo Título!";
+class Animal
+{
+    public void Comer()
+    {
+        Console.WriteLine("Este animal está comiendo.");
+    }
+}
 
-// Cambiar el estilo
-titulo.style.color = "red";</code></pre>
+class Perro : Animal
+{
+    public void Ladrar()
+    {
+        Console.WriteLine("¡Guau guau!");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Perro miPerro = new Perro();
+        miPerro.Comer();
+        miPerro.Ladrar();
+    }
+}</code></pre>
           </div>
         </div>
       </section>
 
-      <section id="eventos-js" class="content-section">
+      <!-- Sección de Polimorfismo -->
+      <section id="polimorfismo-csharp" class="content-section">
         <div class="container">
-          <h2>Eventos en JavaScript</h2>
+          <h2>Polimorfismo en C#</h2>
           <p>
-            Los eventos permiten que tu página web responda a las acciones del
-            usuario, como clics, cambios en los campos de entrada, etc.
+            El polimorfismo permite que objetos de diferentes clases sean
+            tratados como objetos de una clase base. Aquí tienes un ejemplo
+            usando métodos virtuales y sobreescritos:
           </p>
           <div class="code-example">
             <div class="code-header">
-              <span>Ejemplo de Eventos</span>
+              <span>Ejemplo de Polimorfismo</span>
             </div>
-            <pre><code>// Seleccionar un botón
-const boton = document.getElementById("miBoton");
+            <pre><code>using System;
 
-// Agregar un evento de clic
-boton.addEventListener("click", () => {
-  alert("¡Botón clickeado!");
-});</code></pre>
+class Animal
+{
+    public virtual void HacerSonido()
+    {
+        Console.WriteLine("Este animal hace un sonido.");
+    }
+}
+
+class Perro : Animal
+{
+    public override void HacerSonido()
+    {
+        Console.WriteLine("¡Guau guau!");
+    }
+}
+
+class Gato : Animal
+{
+    public override void HacerSonido()
+    {
+        Console.WriteLine("¡Miau miau!");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Animal miAnimal1 = new Perro();
+        Animal miAnimal2 = new Gato();
+
+        miAnimal1.HacerSonido();
+        miAnimal2.HacerSonido();
+    }
+}</code></pre>
           </div>
         </div>
       </section>
 
-      <section id="ajax-js" class="content-section">
+      <!-- Sección de Manejo de Excepciones -->
+      <section id="excepciones-csharp" class="content-section">
         <div class="container">
-          <h2>AJAX y Fetch API</h2>
+          <h2>Manejo de Excepciones en C#</h2>
           <p>
-            Con Fetch API, puedes hacer solicitudes HTTP asíncronas para obtener
-            datos de un servidor sin recargar la página.
+            En C#, puedes manejar errores usando bloques <code>try-catch</code>.
+            Aquí tienes un ejemplo:
           </p>
           <div class="code-example">
             <div class="code-header">
-              <span>Ejemplo de Fetch API</span>
+              <span>Ejemplo de Manejo de Excepciones</span>
             </div>
-            <pre><code>// Obtener datos de una API
-fetch('https://jsonplaceholder.typicode.com/posts/1')
-  .then(response => response.json())
-  .then(data => console.log(data))
-  .catch(error => console.error('Error:', error));</code></pre>
+            <pre><code>using System;
+
+class Program
+{
+    static void Main()
+    {
+        try
+        {
+            int resultado = 10 / 0;
+            Console.WriteLine("El resultado es: " + resultado);
+        }
+        catch (DivideByZeroException e)
+        {
+            Console.WriteLine("Error: División por cero.");
+        }
+    }
+}</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección de Colecciones -->
+      <section id="colecciones-csharp" class="content-section">
+        <div class="container">
+          <h2>Colecciones en C#</h2>
+          <p>
+            Las colecciones en C# son estructuras de datos que permiten
+            almacenar y manipular grupos de objetos. Aquí tienes un ejemplo de
+            uso de una <code>List</code>:
+          </p>
+          <div class="code-example">
+            <div class="code-header">
+              <span>Ejemplo de Colecciones</span>
+            </div>
+            <pre><code>using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        List&lt;string&gt; nombres = new List&lt;string&gt;();
+        nombres.Add("Juan");
+        nombres.Add("Ana");
+        nombres.Add("Carlos");
+
+        foreach (string nombre in nombres)
+        {
+            Console.WriteLine(nombre);
+        }
+    }
+}</code></pre>
           </div>
         </div>
       </section>
 
       <!-- Sección de Ejercicios Prácticos -->
-      <section id="ejercicios-js" class="content-section">
+      <section id="ejercicios-csharp" class="content-section">
         <div class="container">
           <h2>Ejercicios Prácticos</h2>
           <p>
-            Aquí tienes algunos ejercicios para practicar tus habilidades en
-            JavaScript:
+            Aquí tienes algunos ejercicios para practicar tus habilidades en C#:
           </p>
           <div class="list-box">
-            <h3>Ejercicio 1: Suma de dos números</h3>
+            <h3>Ejercicio 1: Clase Cuenta Bancaria</h3>
             <p>
-              Escribe una función que tome dos números como argumentos y
-              devuelva su suma.
+              Crea una clase <code>CuentaBancaria</code> con atributos como
+              <code>saldo</code> y métodos como <code>Depositar</code> y
+              <code>Retirar</code>.
             </p>
           </div>
           <div class="list-box">
-            <h3>Ejercicio 2: Manipulación del DOM</h3>
+            <h3>Ejercicio 2: Herencia</h3>
             <p>
-              Crea un botón que, al hacer clic, cambie el texto de un elemento
-              en la página.
+              Crea una clase base <code>Vehiculo</code> y dos clases derivadas
+              <code>Coche</code> y <code>Moto</code>. Implementa métodos
+              específicos para cada tipo de vehículo.
             </p>
           </div>
           <div class="list-box">
-            <h3>Ejercicio 3: Fetch API</h3>
+            <h3>Ejercicio 3: Colecciones</h3>
             <p>
-              Usa Fetch API para obtener datos de una API pública y muestra los
-              resultados en la página.
+              Usa un <code>Dictionary</code> para almacenar nombres de personas
+              y sus edades. Luego, imprime el contenido del diccionario.
             </p>
           </div>
         </div>
